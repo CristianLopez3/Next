@@ -2,32 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+@layer base {
+  
+  html { 
+    @apply m-0 p-0
+  }
+
+  body{
+    @apply bg-black text-white overflow-x-hidden m-0 p-0 ;
+  }
+
+
+  h2{
+    @apply text-3xl font-bold text-center;
+  }
+
+}
+
+@layer components {
+  .App {
+    @apply flex items-center  justify-between min-h-screen bg-gray-500
+  }
+  .btn {
+    @apply flex gap-2 items-center  justify-center  py-2 px-4 font-semibold shadow-md rounded-lg;
+  }
+  .btn.btn-light{
+    @apply bg-white text-gray-500;
+  }
+  .btn.btn-danger {
+    @apply text-white bg-red-600 shadow-red-400/40;
+  }
+  .btn.btn-warning {
+    @apply  bg-yellow-300 shadow-yellow-400/40 text-yellow-800;
+  }
+  .btn.btn-success {
+    @apply  bg-green-200 shadow-green-400/40 text-green-800;
+  }
+  .row-table {
+    @apply p-3 text-sm text-gray-700 whitespace-nowrap;
+  }
+  .container-section {
+    @apply container mx-auto;
+  }
+  
+  .navbar-container {
+    @apply fixed top-0 left-0 z-[100] w-full h-auto bg-black  rounded border-secondary
+  }
+  .span-primary {
+    @apply bg-primary;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
