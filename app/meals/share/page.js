@@ -1,9 +1,7 @@
-export default function MealShare(){
+export default function MealShare() {
   return (
     <main>
-      <h1>
-        meal to share
-      </h1>
+      <h1>meal to share</h1>
     </main>
-  )
+  );
 }
