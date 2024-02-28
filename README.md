@@ -18,4 +18,10 @@ install
 >[!TIP]
 > visit: [next documentation](https://nextjs.org/docs/app/api-reference/file-conventions)
 
-### 
+### Move to production
+```sh
+  npm run build
+  npm start
+```
+
+### Storing images in AWS 3
