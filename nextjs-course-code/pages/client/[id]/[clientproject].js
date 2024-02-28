@@ -1,4 +1,4 @@
-earimport { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 const SelectedClientProjectPage = () => {
   const router = useRouter();
